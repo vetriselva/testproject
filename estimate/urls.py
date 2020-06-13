@@ -1,6 +1,6 @@
 from django.urls import path
-from .views import index,update
+from .views import estimate,estimate_edit
 urlpatterns = [
-    path('estimate/', index, name= 'index'),
-    path("update_server/", update, name="update"),
+	path('estimate/', estimate, name= 'estimate'),
+	path('estimate/<int:pk>/', estimate_edit, name= 'estimate_edit')
 ]
